@@ -1,0 +1,96 @@
+.plans-container{
+    margin-top: -64px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+    gap: 64px;
+    position: relative;
+}
+.plans{
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+   
+}
+.plan{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    color: white;
+    width: 270px;
+    padding: 24px;
+    gap: 32px;
+    cursor: pointer;
+}
+
+.plan:nth-child(2){
+    background: var(--color);
+    transform: scale(1.1);
+}
+
+.plan>span:nth-of-type(1){
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.plan>span:nth-of-type(2){
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.plan:nth-child(5){
+    font-size: 8px;
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.feature{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.feature>img{
+    width: 16px;
+    height: 16px;
+}
+
+.plan:nth-child(2)>button{
+    color: orange;
+}
+
+.blur-p-1{
+    width: 512px;
+    height: 368px;
+    left: 50px;
+    top: 100px;
+}
+
+.blur-p-2{
+    width: 550px;
+    height: 368px;
+    right: 30px;
+    top: 130px;
+}
+
+@media screen and (max-width:768px){
+    .program-text>span{
+        flex-direction: column;
+        font-size: x-large;
+    }
+    .plans{
+       flex-direction: column;
+    }
+    .plan{
+        flex-direction: column;
+        width: 80%;
+    }
+    .plan:nth-child(2){
+        background: var(--color);
+        transform: none;
+    }
+}

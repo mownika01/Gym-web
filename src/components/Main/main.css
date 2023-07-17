@@ -1,0 +1,316 @@
+.main{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.left{
+    padding: 32px;
+    padding-top: 24px;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap:64px;
+}
+.ad{
+    width:fit-content;
+    background-color: #363d42;
+    border-radius: 48px;
+    padding: 18px 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: flex-start;  
+}
+.ad>div{
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    transition: all 1s ease;
+}
+@keyframes spin{
+     from{
+        left:220px;
+     }
+     to{
+        left: 8px;
+     }
+}
+.ad>span{
+    z-index: 2;
+}
+.ad>div{
+    position: absolute;
+    left:8px;
+    background-color: orange;
+    border-radius: 48px;
+    height: 80%;
+    width: 90px;
+    z-index: 1;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    font-size: 73px;
+    color: white;
+    font-weight: bold;
+    text-overflow: inherit;
+}
+.text>div:nth-of-type(3){
+    font-size: 17px;
+    font-weight: normal;
+    width:70%;
+    letter-spacing: 1.5px;
+}
+.numbers{
+    display: flex;
+    gap:32px;
+}
+.numbers>div{
+    display:flex;
+    flex-direction: column;
+}
+.numbers>div>span:nth-of-type(1){
+    color: white;
+    font-size: 32px;
+}
+.numbers>div>span:nth-of-type(2){
+    color: darkgray;
+}
+.btn{
+    background-color: white;
+    padding: 8px;
+    font-weight: bold;
+    border: 4px solid transparent;
+    transition: 300ms all;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    font-weight: normal;
+    gap: 16px;
+}
+.buttons>:nth-of-type(1){
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    width: 128px;
+}
+.buttons>:nth-of-type(2){
+    border: 2px solid orange;
+    color: white;
+    background-color: transparent;
+    width:128px;
+}
+.right{
+    flex:1;
+    position: relative;
+    background-color: orange;
+}
+.right> .btn{
+    position: absolute;
+    top:32px;
+    right:49px;
+    color: black;
+}
+.heart-rate{
+    position: absolute;
+    top:112px;
+    right: 64px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(83, 83, 83);
+    border-radius: 5px;
+    padding: 16px;
+    align-items: start;
+    gap:16px;
+    animation-name: grow;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    transition: all 1s ease-out;
+}
+ @keyframes grow{
+    from{
+        right:0px;
+    }
+    to{
+        right: 64px;
+    }
+ }
+.heart-rate>img{
+    width:32px;
+}
+.heart-rate>:nth-child(2){
+    color: darkgray;
+}
+.heart-rate>:nth-child(3){
+   color: white;
+   font-size: 24px;
+}
+.main-img{
+    width:368px;
+    position: absolute;
+    top:170px;
+    right:180px;
+    height:550px;
+}
+.main-img_back{
+    position: absolute;
+    z-index: -1;
+    top: 64px;
+    right: 375px;
+    width:240px;
+    animation-name: moved;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    transition: all 1s ease;
+}
+@keyframes moved{
+    from{
+        right:300px;
+    }
+    to{
+        right:375px;
+    }
+}
+.calories{
+    display: flex;
+    background-color: #5b5c5d;
+    position: absolute;
+    top:610px;
+    right: 580px;
+    gap: 32px;
+    padding: 16px;
+    border-radius: 5px;
+    width: 200px;
+    animation-name: oval;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    transition: all 1s ease-in-out;
+}
+@keyframes oval{
+    from{
+        right:800px;
+    }
+
+    to{
+        right: 580px;
+    }
+}
+.calories>img{
+    width:50px;
+}
+.calories>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.calories>div>:nth-child(1){
+    color: darkgray;
+}
+.calories>div>:nth-child(2){
+    color: white;
+    font-size: 24px;
+}
+.main-blur{
+    width: 362px;
+    height: 480px;
+    top: 30px;
+    left:0;
+}
+@media screen and (max-width:768px){
+    .main{
+        flex-direction: column;
+    }
+    .main-blur{
+        width: 250px;
+    }
+   .ad{
+        margin-top: 0;
+        align-self: center;
+        transform: scale(0.8);
+        font-size: small;
+    }
+    .ad>div{
+        width: 75px;
+    }
+    .ad>div{
+        animation-name: spin;
+        animation-timing-function: linear;
+        animation-duration: 1.5s;
+        transition: all 1s ease;
+    }
+    @keyframes spin{
+        from{
+           left:140px;
+        }
+        to{
+           left: 8px;
+        }
+   }
+   .text{
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    margin-top: 0;
+   }
+   .text>div:nth-of-type(3){
+     font-size: small;
+     font-weight: 200;
+     justify-self: center;
+     text-align: center;
+     letter-spacing: 1px;
+   }
+   .numbers>div>span:nth-child(1){
+    font-size: large;
+   }
+   .numbers>div>span:nth-child(2){
+    font-size: small;
+   }
+   .buttons{
+    margin-top: 0;
+    justify-content: center;
+   }
+   .right{
+    display: flex;
+    flex-direction: column;
+    background: none;
+   }
+   .heart-rate{
+    left: 15px;
+    top: 28px;
+    position: relative;
+   }
+   .main-img{
+    position: relative;
+    left: 80px;
+    top: -60px;
+    width: 200px;
+    height: 300px;
+    align-self: center;
+   }
+   .main-img_back{
+     width: 200px;
+     left: 50px;
+     top: 50px;
+     align-self: center;
+   }
+   .calories{
+    position: relative;
+    left: 20px;
+    top: -30px;
+    width: 180px;
+    align-self: center;
+   }
+   .calories>img{
+    width: 32px;
+   }
+   .calories>div>span:nth-of-type(2){
+    font-size: small;
+   }
+}

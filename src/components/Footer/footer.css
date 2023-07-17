@@ -1,0 +1,75 @@
+.footer-container{
+    position: relative;
+}
+
+.footer-container>hr{
+    border: 1px solid gray;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding:48px 32px;
+    gap: 64px;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+
+.social-icons{
+    display: flex;
+    gap: 64px;
+    position: relative;
+}
+.social-icons>img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.logo-f>img{
+   width: 160px;
+} 
+
+.f-blur-1{
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    filter: blur(180px);
+    width: 416px;
+    height: 192px;
+    top: 200px;
+    bottom: 0;
+    right: 350px;
+}
+.f-blur-2{
+    width: 450px;
+    height: 192px;
+    top: 200px;
+    bottom: 0;
+    left: 350px;
+    background-color: rgb(255, 172, 18);
+    filter: blur(180px);
+}
+
+@media screen and (max-width:768px){
+    .f-blur-1{
+        position: absolute;
+        background-color: red;
+        border-radius: 50%;
+        filter: blur(140px);
+        width: 300px;
+        top: 60px;
+        bottom: 0;
+        right: 50px;
+    }
+    .f-blur-2{
+        width: 200px;
+        height: 102px;
+        top: 70px;
+        bottom: 0;
+        left: 40px;
+        background-color: rgb(255, 172, 18);
+        filter: blur(130px);
+    }
+}

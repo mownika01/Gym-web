@@ -1,0 +1,165 @@
+.t-container{
+    display: flex;
+    padding: 0 32px;
+    gap: 16px;
+    position: relative;
+}
+.t-left{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 16px;
+    flex: 1;
+    color: white;
+}
+
+.t-left>span:nth-of-type(1){
+    color: orange;
+    font-weight: bold;
+}
+
+.t-left>span:nth-of-type(2){
+    font-weight: bold;
+    font-size: 48px;
+}
+.t-left>span:nth-of-type(3){
+    font-weight: bold;
+    font-size: 48px;
+}
+.t-left>span:nth-of-type(4){
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    text-transform: none;
+    text-align: justify;
+}
+
+.t-right{
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+
+.t-right>img{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top:16px;
+    right: 170px;
+    object-fit: cover;
+}
+
+.arrows{
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    bottom: 32px;
+    right: 500px;
+    cursor: pointer;
+}
+.arrows>img{
+    width: 20px;
+    height: 20px;
+}
+
+.t-right>div:nth-of-type(1){
+    width: 230px;
+    height: 220px;
+    border: 2px solid orange;
+    background-color: transparent;
+    position: absolute;
+    right: 200px;
+    top:6px;
+}
+
+.t-right>div:nth-of-type(1){
+    animation-name: mm;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    transition: all 1s ease-in;
+}
+
+@keyframes mm{
+    from{
+        opacity: 0;
+        right:400px;
+    }
+    to{
+        opacity: 1;
+        right:200px;
+    }
+}
+.t-right>div:nth-of-type(2){
+    width: 230px;
+    height: 230px;
+    background: var(--color);
+    position: absolute;
+    right: 160px;
+    top:48px;
+}
+
+.t-right>div:nth-of-type(2){
+    animation-name: mmm;
+    animation-duration: 0.8s;
+    animation-timing-function: linear  infinite;
+    transition: all 1s ease-in;
+}
+
+@keyframes mmm{
+    from{
+        opacity: 0;
+        right:60px;
+    }
+    to{
+        opacity: 1;
+        right:160px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .t-container{
+        flex-direction: column;
+    }
+    .t-left>span:nth-of-type(2){
+        font-size: xx-large;
+    }
+    .t-left>span:nth-of-type(3){
+        font-size: xx-large;
+    }
+
+    .t-right>div:nth-of-type(1),
+    .t-right>div:nth-of-type(2)
+    {
+        display: none;
+    }
+    .t-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+    .t-right>img{
+        position: relative;
+        right: 0;
+        align-self: center;
+    }
+
+    .arrows{
+        position: relative;
+        top: 0;
+        right: 0;
+        align-self: center;
+    }
+    .arrows>img{
+        width: 20px;
+        height: 20px;
+    }
+    .t-left>span:nth-of-type(4){
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 35px;
+        text-transform: none;
+        text-align: justify;
+    }
+}
