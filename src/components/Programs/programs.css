@@ -52,6 +52,10 @@
     width: 18px;
 }
 
+.category>:nth-child(1){
+    width: 100px;
+}
+
 @media screen and (max-width:768px){
     .program-text{
         flex-direction: column;
