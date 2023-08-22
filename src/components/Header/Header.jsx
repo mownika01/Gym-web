@@ -42,7 +42,7 @@ const Header = () => {
             onClick={()=>setMenu(false)}
             to='testimonials'
             smooth={true}
-            >Testomonials</Link></li>
+            >Testimonials</Link></li>
         </ul>
        }
         
